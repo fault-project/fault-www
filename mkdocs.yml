@@ -1,0 +1,137 @@
+site_name: "fault."
+site_description: "Developer-Friendly Reliability Engineering | /lɥœʁ/"
+site_author: "Sylvain Hellegouarch"
+site_url: https://fault.dev
+repo_url: https://github.com/rebound-how/rebound
+repo_name: rebound/fault
+edit_uri: edit/main/docs/fault/docs
+copyright: Copyright &copy; 2024 - 2025 Sylvain Hellegouarch
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/sylvainhellegouarch/
+      name: Sylvain Hellegouarch on Linkedin
+    - icon: fontawesome/brands/mastodon
+      link: https://fosstodon.org/@lawouach
+      name: Sylvain Hellegouarch on Fosstodon
+nav:
+  - Home: index.md
+  - Getting Started:
+    - "Install": tutorials/install.md
+    - "tl;dr": tutorials/tldr.md
+    - "Getting Started": tutorials/getting-started.md
+    - "Creating a Reliability Testing Scenario": tutorials/create-scenario.md
+  - "How-To Guides":
+    - "Install fault":
+      - how-to/install.md
+    - "Proxy Configuration":
+      - "Lifecycle": how-to/proxy/lifecycle.md
+      - "TUI": how-to/proxy/tui.md
+      - "TCP Proxies": how-to/proxy/protocols/tcp.md
+      - "Stealth Mode (eBPF)": how-to/proxy/stealth/configure-stealth-mode.md
+      - "Open Telemetry": how-to/observability/traces.md
+    - "Fault Injection":
+      - "Latency": how-to/proxy/faults/configure-latency.md
+      - "Bandwidth": how-to/proxy/faults/configure-bandwidth.md
+      - "Packet Loss": how-to/proxy/faults/configure-packet-loss.md
+      - "HTTP Error": how-to/proxy/faults/configure-http-error.md
+      - "Jitter": how-to/proxy/faults/configure-jitter.md
+      - "Blackhole": how-to/proxy/faults/configure-blackhole.md
+      - "Extend fault": how-to/proxy/faults/extending.md
+    - "Scenarios":
+      - "Generate": how-to/scenarios/generate.md
+      - "Run": how-to/scenarios/run.md
+      - "Report": how-to/scenarios/reporting.md
+    - "Agent":
+      - "Scenario Analysis": how-to/agent/report-advices.md
+      - "Code Review & Suggestions": how-to/agent/code-suggestions.md
+    - "Deployment":
+      - "GitHub Action": how-to/ci/github.md
+      - "Kubernetes": how-to/platform/run-on-kubernetes.md
+      - "Docker": how-to/platform/run-with-docker.md
+      - "Windows": how-to/platform/run-on-windows.md
+      - "Chaos Toolkit": how-to/run-with-chaostoolkit.md
+      - "Reliably": how-to/run-with-reliably.md
+  - Reference:
+    - "CLI Commands": reference/cli-commands.md
+    - "Scenario File Format": reference/scenario-file-format.md
+    - "Environment Variables": reference/environment-variables.md
+    - "Builtin Faults": reference/builtin-faults.md
+    - "Scheduling Intervals": reference/schedule-intervals-syntax.md
+    - "TCP Proxy Mapping": reference/proxy-mapping-syntax.md
+  - Explanations:
+    - "Why fault?": explanations/why-fault.md
+    - "Fault Injection Basics": explanations/fault-injection-basics.md
+    - "Understanding eBPF": explanations/understanding-ebpf.md
+    - "Technical Journey": reference/technical-journey.md
+theme:
+  name: material
+  custom_dir: docs/overrides
+  icon:
+    annotation: material/plus-circle
+    repo: fontawesome/brands/github
+    logo: material/ethernet
+  palette:
+    primary: custom
+
+  features:
+    - navigation.tabs
+    - navigation.path
+    - navigation.prune
+    - content.tabs
+    - search.suggest
+    - search.highlight
+    - navigation.tracking
+    - navigation.top
+    - toc.integrate
+    - content.code.copy
+    - content.code.annotate
+    - content.footnote.tooltips
+    #- content.action.edit
+
+  
+extra_css:
+  - stylesheets/fault.css
+
+plugins:
+  - search
+  - glightbox
+  - tags
+  - social:
+      enabled: !ENV [CI, false]
+  - git-revision-date-localized:
+      enabled: !ENV [CI, false]
+      enable_creation_date: true
+  - mkdocs-simple-hooks:
+      hooks:
+        on_post_build: "hooks:copy_install"
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.mark
+  - pymdownx.blocks.definition
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      pygments_lang_class: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
