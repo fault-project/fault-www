@@ -85,7 +85,7 @@ body {
 
 
 .gradient-text {
-    background-image: linear-gradient(45deg, #67B0C2 11%, #F7EAC8 63%, #D14B93 100%);
+    background-image: linear-gradient(234deg, #67B0C2 11%, #F7EAC8 45%, #D14B93 100%);
     background-size: 300% 100%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -107,7 +107,7 @@ body {
 
 @media (min-width: 1200px) {
     .logo {
-        font-size: 84px;
+        font-size: 104px;
     }
 }
 
