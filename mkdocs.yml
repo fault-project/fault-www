@@ -3,7 +3,7 @@ site_description: "Helping Engineers and AI-agents cooperate to build reliable a
 site_author: "Sylvain Hellegouarch"
 site_url: https://fault-project.com
 repo_url: https://github.com/fault-project/fault-cli
-repo_name: rebound/fault
+repo_name: fault-cli
 edit_uri: edit/main/docs/fault/docs
 copyright: Copyright &copy; 2024 - 2025 Sylvain Hellegouarch
 extra:
