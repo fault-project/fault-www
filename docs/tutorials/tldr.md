@@ -2,10 +2,11 @@
 
 ## Overview
 
-<span class="f">fault</span> comes with two main capabilities in one CLI.
+<span class="f">fault</span> comes with the following main capabilities in one CLI.
 
 * Fault Injection: operation oriented features
 * AI Agent: LLM-based features
+* Easy platform injection
 
 ```mermaid
 ---
@@ -16,10 +17,17 @@ mindmap
   root((fault CLI))
     Fault Injection
       Proxy
+        Network
+        LLM
+        Database
       Scenario
     AI Agent
       Review
       MCP
+    Platform
+      Kubernetes
+      AWS
+      GCP
 ```
 
 
@@ -38,6 +46,28 @@ allows you to:
     Run `fault scenario generate` and `fault scenario run` to create
     YAML-based scenarios that can be stored alongside your code and executed
     from your CI.
+
+
+## Getting started with fault injection for LLM
+
+The core of <span class="f">fault</span> is its fault injection engine. It
+offers a nice way to inject LLM-specific faults into your your LLM calls:
+
+
+-   [X] Inject faults into your services making calls to LLM providers
+
+    Run `fault run llm` to start injecting LLM faults
+
+
+## Getting started with platform injection
+
+<span class="f">fault</span> makes it easy to inject itself into
+your platform so you can easily explore faults there as well.
+
+
+-   [X] Inject faults into your favourite platform
+
+    Run `fault inject` to start injecting faults
 
 
 ## Getting started with the AI Agent
