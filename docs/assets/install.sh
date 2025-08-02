@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-GITHUB_ORG="rebound-how"
-GITHUB_REPO="rebound"
+GITHUB_ORG="fault-project"
+GITHUB_REPO="fault-cli"
 ASSET_TARGET="fault-cli"
 TARGET_BIN_DIR="${TARGET_BIN_DIR:-$HOME/.local/bin}"
 FILE_PATH="${TARGET_BIN_DIR}/fault"
