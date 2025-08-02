@@ -19,8 +19,8 @@ nav:
   - Getting Started:
     - "Install": tutorials/install.md
     - "tl;dr": tutorials/tldr.md
-    - "Getting Started": tutorials/getting-started.md
-    - "Creating a Reliability Testing Scenario": tutorials/create-scenario.md
+    - "Getting Started with the Proxy": tutorials/getting-started.md
+    - "Creating a Reliability Scenario": tutorials/create-scenario.md
   - "How-To Guides":
     - "Install fault":
       - how-to/install.md

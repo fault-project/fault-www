@@ -10,7 +10,7 @@
 
   Understanding how an application reacts under network duress is prime to build
   more resilient systems overall.
-  
+
 **Goal**:
 
   By the end of this tutorial, you will:
@@ -18,6 +18,13 @@
   - Configure <span class="f">fault</span> to apply latency.
   - Run a defined scenario that systematically applies this fault.
   - Observe the application’s behavior and interpret the resulting report.
+
+!!! tip
+
+    In this guide, you will learn how to create a scenario manually, but
+    if you are targetting a HTTP service that exposes an OpenAPI specification,
+    <span class="f">fault</span> will help you generate scenarios
+    automatically.
 
 ## Prerequisites
 
@@ -769,3 +776,4 @@ production.
 
 - **Discover our [How-To Guides](../how-to/scenarios/generate.md)** to explore
   <span class="f">fault</span>'s capabilities and how to apply them.
+- **Generate scenarios from [OpenAPI specifications](../how-to/scenarios/generate.md#generate-scenarios-from-an-openapi-specification)**.
