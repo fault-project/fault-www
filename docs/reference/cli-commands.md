@@ -413,6 +413,9 @@ When `--case` is `inject-bias`.
 - **`--bias-replacement`**
     Substitute text for bias.
 
+- **`--instruction`**
+  Optional instruction/System prompt to set on the response chunks.
+
 When `--case` is `http-error`.
 
 No extra parameters.

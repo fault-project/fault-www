@@ -75,7 +75,7 @@ be simpler to populate these options via environment variables.
 | `FAULT_LLM_SLOW_STREAM_MEAN_DELAY`                  | `300`    | Latency to apply to the LLM response.                                                 |
 | `FAULT_LLM_SCRAMBLE_PATTERN`                  | (none)    | Regex pattern to look for into the request.                                                 |
 | `FAULT_LLM_SCRAMBLE_WITH`                  | (none)    | Replacement string when the pattern matches.                                                 |
-| `FAULT_LLM_SCRAMBLE_INSTRUCTION`                  | (none)    | Instruction to inject into the LLM requests as a system prompt.                                                 |
+| `FAULT_LLM_INSTRUCTION`                  | (none)    | Instruction to inject into the LLM requests/responses as a system prompt.                                                 |
 | `FAULT_LLM_BIAS_PATTERN`                  | (none)    |  Regex pattern to look for into the response.                                                 |
 | `FAULT_LLM_BIAS_REPLACEMENT`                  | (none)    | Replacement string when the pattern matches.                                                 |
 
