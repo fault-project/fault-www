@@ -254,7 +254,7 @@ from this application.
         SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
         ```
 
-        **Why:**  prevents “head of line” blocking when one connection is slow (disk I/O hiccup, GC pause, etc.).
+        **Why:**  prevents "head of line" blocking when one connection is slow (disk I/O hiccup, GC pause, etc.).
 
         ---
 
@@ -427,12 +427,13 @@ from this application.
 
         ### Summary of Impact
 
-        - Pool tuning + per-call timeouts → no more “stair-step” tail-latency under slow queries.  
+        - Pool tuning + per-call timeouts → no more "stair-step" tail-latency under slow queries.  
         - Idempotent retries → hide small network/DB blips.  
         - Metrics & tracing → proactive alerting.  
         - Circuit-breaker → quick fail-fast during true outages.
 
-        With these four “drop-in” changes you’ll eliminate head-of-line blocking, dramatically reduce error SLO violations on `GET /users/{user_id}`, and gain visibility into when—and why—your service is struggling.
+        With these four "drop-in" changes you’ll eliminate head-of-line blocking,
+        dramatically reduce error SLO violations on `GET /users/{user_id}`, and gain visibility into when and why your service is struggling.
 
 -   [X] Optionally Inject Advices from Scenario Executions Analysis
 
@@ -509,7 +510,7 @@ from this application.
              ```  
 
           2. Add a simple retry with exponential back-off around commits  
-             Transient “database is locked” errors in SQLite (and some cloud-SQL networks) can often be overcome by a retry. The [tenacity](https://github.com/jd/tenacity) library gives you a one-liner:  
+             Transient "database is locked" errors in SQLite (and some cloud-SQL networks) can often be overcome by a retry. The [tenacity](https://github.com/jd/tenacity) library gives you a one-liner:  
              ```bash
              pip install tenacity
              ```  
@@ -550,7 +551,7 @@ from this application.
              ```  
 
           4. Add basic metrics and tracing hooks  
-             Knowing “what just broke” is half the battle. Two minutes to add Prometheus metrics:  
+             Knowing "what just broke" is half the battle. Two minutes to add Prometheus metrics:  
              ```bash
              pip install prometheus_client
              ```  

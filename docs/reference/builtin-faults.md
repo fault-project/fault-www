@@ -161,7 +161,7 @@ fault implements four different distributions.
     ```
 
 - **shape**  
-  Governs how “heavy” the tail is. Lower `shape` implies more frequent extreme
+  Governs how "heavy" the tail is. Lower `shape` implies more frequent extreme
   delays; higher `shape` yields fewer large spikes.
 - **scale**  
   Minimum threshold (in milliseconds). Delays start at `scale` and can grow
@@ -269,7 +269,7 @@ defined maximum transfer rate.
   both sides of a connection.
 
 - **Rate Limit and Unit**
-  The core of the bandwidth fault is its transfer rate—defined as a positive
+  The core of the bandwidth fault is its transfer rate - defined as a positive
   integer value paired with a unit. The unit (Bps, KBps, MBps, or GBps)
   specifies the scale of the limitation. In practice, this value represents the
   maximum number of bytes (or kilobytes, megabytes, etc.) that can be
@@ -279,7 +279,7 @@ defined maximum transfer rate.
 ## Blackhole
 
 **Definition**
-The Blackhole network fault causes packets to vanish—effectively discarding or
+The Blackhole network fault causes packets to vanish - effectively discarding or
 "dropping" the traffic. When this fault is enabled, data sent over the affected
 network path is simply lost, simulating scenarios such as misconfigured routing,
 severe network congestion, or complete link failure. This helps test how well an

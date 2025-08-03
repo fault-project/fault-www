@@ -95,5 +95,5 @@ This is great for testing two‐way real‐time apps.
   (e.g., [start:20%,duration:30%]), toggling unpredictably.
 
 By adjusting amplitude and frequency and applying them to ingress, egress, or
-both, you can simulate a wide spectrum of jitter conditions—from slight
+both, you can simulate a wide spectrum of jitter conditions - from slight
 fluctuations to severe choppy networks.

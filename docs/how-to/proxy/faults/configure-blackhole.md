@@ -30,7 +30,7 @@ a response, eventually timing out.
 
 ## Blackhole Traffic for Specific Time Windows
 
-Often, you want to simulate a partial outage—periods of normal traffic followed
+Often, you want to simulate a partial outage - periods of normal traffic followed
 by complete blackhole intervals.
 
 -   [X] Start the proxy with blackhole fault and a schedule

@@ -48,7 +48,7 @@ proxy run.
 
         Timeline:
         * Minutes 0–0.5: No loss (normal).
-        * Minutes 0.5–2.5: Packet loss enabled (clients see up to some “lost” packets).
+        * Minutes 0.5–2.5: Packet loss enabled (clients see up to some "lost" packets).
         * Minutes 2.5–6.0: Normal again.
         * Minutes 6.0–7.5: Packet loss resumes.
         * Remaining time to minute 10: No loss.

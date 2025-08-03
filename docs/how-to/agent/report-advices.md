@@ -530,7 +530,7 @@ from this application.
         
         ## Overall Resilience Posture
         
-        The root (`GET /`) endpoint is generally robust—surviving latency spikes, packet loss, jitter, bandwidth caps and injected HTTP errors with zero expectation failures—but it misses P95 latency targets during periodic pulses and full black-hole events. The `POST /users/` endpoint handles most faults but breaks under packet loss, stair-step and random 500 errors, indicating its retry/time-out logic needs reinforcement. The `GET /users/{user_id}` endpoint is the weakest link, failing under latency spikes, packet loss, jitter and black-hole scenarios and routinely missing its P95 and error SLOs, so it requires urgent hardening.
+        The root (`GET /`) endpoint is generally robust - surviving latency spikes, packet loss, jitter, bandwidth caps and injected HTTP errors with zero expectation failures - but it misses P95 latency targets during periodic pulses and full black-hole events. The `POST /users/` endpoint handles most faults but breaks under packet loss, stair-step and random 500 errors, indicating its retry/time-out logic needs reinforcement. The `GET /users/{user_id}` endpoint is the weakest link, failing under latency spikes, packet loss, jitter and black-hole scenarios and routinely missing its P95 and error SLOs, so it requires urgent hardening.
         
         ## SLO Failures Deep Dive
         
@@ -578,7 +578,7 @@ from this application.
             
             * Stair-step latency growth (5×100 ms increments)
             * Periodic 150–250 ms tail-latency pulses during load
-            * “Full black-hole” outages causing sustained queue buildup  
+            * "Full black-hole" outages causing sustained queue buildup  
                 *Hypothesis:*  
                 The system lacks explicit request or downstream call timeouts, so slow or black-holed calls pile up in the server’s worker pool. Under load, blocked threads/tasks queue additional requests, amplifying tail latency in a cascading fashion.  
                 *Actionable next steps:*
@@ -854,7 +854,7 @@ from this application.
         
         ## Overall Resilience Posture
         
-        The root (`/`) endpoint proved highly resilient—handling latency spikes, jitter, packet loss, bandwidth caps and injected HTTP errors with zero expectation failures and meeting all latency SLOs. The `POST /users/` endpoint generally stayed functional but breached P95 latency objectives during periodic latency pulses and full black-hole faults, while the `GET /users/{user_id}` endpoint suffered status-code failures and missed P95/P99 SLOs under high-latency, packet-loss and jitter scenarios, indicating its timeout and retry logic needs strengthening.
+        The root (`/`) endpoint proved highly resilient - handling latency spikes, jitter, packet loss, bandwidth caps and injected HTTP errors with zero expectation failures and meeting all latency SLOs. The `POST /users/` endpoint generally stayed functional but breached P95 latency objectives during periodic latency pulses and full black-hole faults, while the `GET /users/{user_id}` endpoint suffered status-code failures and missed P95/P99 SLOs under high-latency, packet-loss and jitter scenarios, indicating its timeout and retry logic needs strengthening.
         
         ## SLO Failures Deep Dive
         
@@ -891,7 +891,7 @@ from this application.
         *Based on the observed SLO-failure patterns, here are the most plausible developer-actionable causes*
         
         1. SQLite file‐locking contention under bursty writes  
-           *Symptom mapping:* periodic tail‐latency pulses on POST `/users/`, stair-step latency growth, “full black-hole” latency spikes during write bursts  
+           *Symptom mapping:* periodic tail‐latency pulses on POST `/users/`, stair-step latency growth, "full black-hole" latency spikes during write bursts  
            *Hypothesis:* the app uses file-based SQLite with default settings. Concurrent commits serialize on the SQLite file lock, so under load writes queue up, inflating p95/p99 latencies and even timing out when the lock persists.
         
         1. Blocking synchronous DB calls in `async` endpoints  

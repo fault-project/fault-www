@@ -38,7 +38,7 @@ production. It does all of this right on your own machine:
 - Inject HTTP errors to see if your app recovers gracefully.
 - Add latency and jitter to gauge performance under slow networks.
 - Test packet loss and bandwidth limits to discover scaling limits.
-- Introduce random “bad gateway” responses and ensure robust fallback paths.
+- Introduce random "bad gateway" responses and ensure robust fallback paths.
 
 ### Tailored for Your Needs
 
@@ -58,7 +58,7 @@ safety, and resilience.
 
 ## The Real-World Costs of Slowness and Unreliability
 
-It’s not just about feeling “fast.” Slow or unreliable responses can have real
+It’s not just about feeling "fast." Slow or unreliable responses can have real
 business and user engagement costs. By
 helping you pinpoint potential performance and reliability issues early, <span class="f">fault</span>
 empowers you to avoid these pitfalls:
@@ -114,7 +114,7 @@ propose a set of new indicators that highlight different angles of resilience:
 - **Failure Surface Awareness**: By injecting HTTP errors, packet loss, or
   bandwidth constraints, you gain clarity on where your code is most fragile.
   Measuring how many parts of your service break under each condition provides
-  a new perspective on your “failure surface.”
+  a new perspective on your "failure surface."
 
 - **Retry Overhead**: Discover the hidden costs of your application’s recovery
   strategies. Do you retry too aggressively, wasting resources and time?
@@ -141,7 +141,7 @@ of building and delivering products.
 
 <span class="f">fault</span> isn’t just another tool on your belt; it’s a new way of thinking about and
 measuring reliability. We’re here to help you see beyond happy paths, to embrace
-uncertainty early, and to raise the bar on what “done” really means.
+uncertainty early, and to raise the bar on what "done" really means.
 
 
 ---
