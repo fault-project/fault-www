@@ -11,7 +11,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/json.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/markdown.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/asciinema-player@3.10.0/dist/bundle/asciinema-player.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/diff.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/asciinema-player@3.10.0/dist/bundle/asciinema-player.min.css">
+
 <link rel="stylesheet" href="/assets/landing.css">
 <script>
   const rules = [
@@ -28,6 +31,41 @@
       mql: window.matchMedia(r.mq),
       url: r.url
     }));
+
+    let overlay = document.getElementById("marker-overlay");
+    let overlayTimeout;
+
+    let player = AsciinemaPlayer.create(
+      "/assets/rec.cast",
+      document.getElementById('cast'), {
+        loop: true,
+        theme: 'monokai',
+        markers: [
+          [1.0, "LLM fault injection"],
+          [33.0, "Latency network injection"],
+          [65.0, "Scenarios generation from OpenAPI"],
+          [72.0, "Scenarios execution"],
+          [110.0, "Code review generation"],
+          [124.0, "Scenario analysis generation"]
+        ]
+    });
+    player.addEventListener('marker', ({ index, time, label }) => {
+      if (overlayTimeout) {
+        clearTimeout(overlayTimeout);
+      }
+
+      overlay.textContent = label;
+      overlay.classList.add("show-marker");
+      overlay.style.display = "block";
+
+      overlayTimeout = setTimeout(() => {
+        overlay.classList.remove("show-marker");
+        setTimeout(() => {
+          overlay.style.display = "none";
+        }, 500);
+      }, 3000);
+    })
+    player.play();
 
   function setDeckSource() {
     const match = mqls.find(x => x.mql.matches);
@@ -67,6 +105,15 @@
           </a>
         </div>
 
+      <div class="row" style="width: 100%; height: 800px;">
+        <div class="col" >
+
+          <div id="cast-container"  class="box-static" style="position: relative; " >
+            <div id="cast"></div>
+            <div id="marker-overlay"></div>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
   </article>
@@ -126,7 +173,7 @@
 
           <p>
             Explore availability threats right from the start through our builtin fault injection engine.
-            Automate continuous validation and make sure you are respect your SLOs.
+            Automate continuous validation and make sure you respect your SLOs.
 
           </p>
           <div class="codeline">

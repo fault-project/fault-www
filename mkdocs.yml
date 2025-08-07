@@ -20,7 +20,7 @@ nav:
     - "Install": tutorials/install.md
     - "tl;dr": tutorials/tldr.md
     - "Getting Started with the Proxy": tutorials/getting-started.md
-    - "Creating a Reliability Scenario": tutorials/create-scenario.md
+    - "Creating Scenario": tutorials/create-scenario.md
   - "How-To Guides":
     - "Install fault":
       - how-to/install.md
@@ -37,6 +37,7 @@ nav:
       - "HTTP Error": how-to/proxy/faults/configure-http-error.md
       - "Jitter": how-to/proxy/faults/configure-jitter.md
       - "Blackhole": how-to/proxy/faults/configure-blackhole.md
+      - "LLM": how-to/proxy/faults/configure-llm.md
       - "Extend fault": how-to/proxy/faults/extending.md
     - "Platform Injection":
       - "Overview": how-to/inject/overview.md

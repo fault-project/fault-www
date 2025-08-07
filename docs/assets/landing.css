@@ -1577,3 +1577,27 @@ label[for="tab-measure"]:hover {
   width: auto; 
   vertical-align: middle;
 }
+
+#marker-overlay {
+    position: absolute;
+    top: 80%;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.75em 1em;
+    border-radius: 8px;
+    font-size: 1rem;
+    display: none;
+    z-index: 999;
+    pointer-events: none;
+}
+
+#marker-overlay {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+#marker-overlay.show-marker {
+  opacity: 1;
+}
