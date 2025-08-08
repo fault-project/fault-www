@@ -1,3 +1,8 @@
+---
+title: Execute Scenarios From GitHub Action
+description: Execute Scenarios From GitHub Action
+---
+
 # Execute Scenarios From GitHub Action
 
 This guide will walk you through integrating <span class="f">fault</span> into your GitHub pipeline.

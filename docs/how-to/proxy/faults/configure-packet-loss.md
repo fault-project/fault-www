@@ -1,3 +1,8 @@
+---
+title: Inject Packet Loss Network Fault
+description: Inject BaPacket Lossdwidth Network Fault
+---
+
 # How to Simulate Packet Loss Using <span class="f">fault</span>
 
 This How-To guide shows you how to configure <span class="f">fault</span> so that a portion of your

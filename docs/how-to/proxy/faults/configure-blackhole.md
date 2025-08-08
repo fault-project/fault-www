@@ -1,3 +1,8 @@
+---
+title: Inject Blackhole Network Fault
+description: Inject Blackhole Network Fault
+---
+
 # How to Blackhole Traffic Using <span class="f">fault</span>
 
 This guide will walk you through emulating network severe degradation into your

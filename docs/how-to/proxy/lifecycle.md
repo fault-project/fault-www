@@ -1,3 +1,8 @@
+---
+title: Understand the Proxy Lifecycle
+description: Understand the Proxy Lifecycle
+---
+
 # Proxy Lifecycle
 
 ## Duration

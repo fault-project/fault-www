@@ -1,3 +1,8 @@
+---
+title: Intercept Network Traffic Transparently
+description: Intercept Network Traffic Transparently with eBPF
+---
+
 # Intercept Network Traffic Transparently
 
 This guide will walk you through enabling <span class="f">fault</span>'s {==stealth mode==} to capture

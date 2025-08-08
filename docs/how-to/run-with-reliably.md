@@ -1,3 +1,8 @@
+---
+title: Run with the Reliably Platform
+description: Run with the Reliably Platform
+---
+
 # Run <span class="f">fault</span> as a Reliably Plan
 
 This guide will walk you through running <span class="f">fault</span> as part of a

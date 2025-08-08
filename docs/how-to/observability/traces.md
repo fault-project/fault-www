@@ -1,3 +1,8 @@
+---
+title: Enable Observability
+description: Enable Observability via Open Telemetry
+---
+
 # Enable <span class="f">fault</span> Observability
 
 This guide will walk you sending traces to an Open Telemetry aware stack.

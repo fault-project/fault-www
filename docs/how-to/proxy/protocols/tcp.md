@@ -1,3 +1,8 @@
+---
+title: Simulate Network Faults On Any TCP-based Traffic
+description: Simulate Network Faults On Any TCP-based Traffic
+---
+
 # How to Simulate Network Faults On Any TCP-based Traffic
 
 This guide shows you how to use <span class="f">fault</span> to simulate network faults on any

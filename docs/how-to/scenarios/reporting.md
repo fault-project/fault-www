@@ -1,3 +1,8 @@
+---
+title: Generate Automated Reliability & Performance Reports
+description: Generate Automated Reliability & Performance Reports
+---
+
 # Explore Scenario Reports
 
 In this guide, you will learn how to interpret the reports generated from

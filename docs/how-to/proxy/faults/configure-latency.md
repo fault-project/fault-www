@@ -1,3 +1,8 @@
+---
+title: Inject Latency Network Fault
+description: Inject Latency Network Fault
+---
+
 # How to Inject Latency into Your Flow with <span class="f">fault</span>
 
 This guide shows how to delay traffic by a configurable amount, distribution,

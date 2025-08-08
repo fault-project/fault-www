@@ -1,3 +1,8 @@
+---
+title: Configure the agent's MCP Agent Server
+description: Configure the agent's MCP Agent Server
+---
+
 # Configure Your <span class="f">fault</span> MCP Agent Server
 
 This guide will take you through configuring the <span class="f">fault</span>

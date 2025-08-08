@@ -1,3 +1,8 @@
+---
+title: Run with Chaos Toolkit
+description: Run with Chaos Toolkit
+---
+
 # Run <span class="f">fault</span> as a Chaos Toolkit Action
 
 This guide will walk you through running <span class="f">fault</span> as a [Chaos Toolkit][ctk] action

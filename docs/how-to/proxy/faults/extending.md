@@ -1,3 +1,8 @@
+---
+title: Extend with gRPC plugins
+description: Extend with gRPC plugins
+---
+
 # Extend <span class="f">fault</span> with gRPC Plugins
 
 <span class="f">fault</span>'s faults are internally managed by design. To support any bespoke

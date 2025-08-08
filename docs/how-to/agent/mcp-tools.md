@@ -1,3 +1,8 @@
+---
+title: Explore the agent's MCP Agent Tools
+description: Explore the agent's MCP Agent Tools
+---
+
 # Explore <span class="f">fault</span> MCP Agent Tools
 
 This guide will take you through the

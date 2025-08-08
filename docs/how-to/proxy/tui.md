@@ -1,3 +1,8 @@
+---
+title: Configure the TUI
+description: Configure the TUI
+---
+
 # Configure the TUI
 
 <span class="f">fault</span> is a CLI. But it doesn't mean it shouldn't display the information with

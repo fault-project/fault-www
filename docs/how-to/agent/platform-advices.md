@@ -1,3 +1,8 @@
+---
+title: Platform Reliability & Performance Analysis
+description: Analyze your platform resources from a reliability & performance posture
+---
+
 # Platform Analysis
 
 This guide will show you how to analyze your platform resources, from an

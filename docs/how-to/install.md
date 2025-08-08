@@ -1,3 +1,8 @@
+---
+title: Install the fault CLI
+description: Install the fault CLI
+---
+
 # Installing the <span class="f">fault</span> cli
 
 <span class="f">fault</span> is a designed to be easily installed on major systems such as Linux,

@@ -1,3 +1,9 @@
+---
+title: Inject Jitter Network Fault
+description: Inject Jitter Network Fault
+---
+
+
 # How to Simulate Jitter Using <span class="f">fault</span>
 
 This guide explains how to introduce variable latency (jitter) into your

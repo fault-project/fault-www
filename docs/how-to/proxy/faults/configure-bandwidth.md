@@ -1,3 +1,8 @@
+---
+title: Inject Bandwidth Network Fault
+description: Inject Bandwidth Network Fault
+---
+
 # How to Simulate Bandwidth Constraints Using <span class="f">fault</span>
 
 This guide shows you how to reduce or throttle network bandwidth in your

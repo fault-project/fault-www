@@ -1,3 +1,8 @@
+---
+title: Why fault?
+description: Why fault?
+---
+
 # Why <span class="f">fault</span>?
 
 We are building <span class="f">fault</span> because we have met unexpected production

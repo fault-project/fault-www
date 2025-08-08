@@ -1,3 +1,8 @@
+---
+title: Getting Started Tutorial
+description: Getting Started Tutorial
+---
+
 # Getting Started with <span class="f">fault</span>
 
 Welcome to <span class="f">fault</span>! Your new ally in exploring and understanding the impact of

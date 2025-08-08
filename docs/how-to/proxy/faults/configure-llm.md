@@ -1,3 +1,8 @@
+---
+title: Inject Faults Into LLM API Calls
+description: Inject Faults Into LLM API Calls
+---
+
 # How to Scramble your LLM communications with <span class="f">fault</span>
 
 This guide shows you how to scramble LLM prompts and responses so that

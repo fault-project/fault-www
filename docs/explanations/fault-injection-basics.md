@@ -1,3 +1,8 @@
+---
+title: Understanding Fault Injection - Purpose and Use in Reliability Engineering
+description: Understanding Fault Injection - Purpose and Use in Reliability Engineering
+---
+
 # Understanding Fault Injection: Purpose and Use in Reliability Engineering
 
 Fault injection isn’t just about breaking things on purpose! It's a proactive strategy to uncover hidden weaknesses in your system before they become critical issues in production. This page explains the purpose behind different types of network faults and how engineers can use them to improve overall reliability.

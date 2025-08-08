@@ -1,3 +1,8 @@
+---
+title: Generate Automated Reliability Testing Scenarios
+description: Generate Automated Reliability Testing Scenarios
+---
+
 # Generate Automated Resilience Testing Scenarios
 
 This guide will walk you through generating <span class="f">fault</span> resilience scenarios that you

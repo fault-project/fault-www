@@ -1,3 +1,8 @@
+---
+title: Understanding eBPF and its Context In Reliability Engineering
+description: Understanding eBPF and its Context In Reliability Engineering
+---
+
 # Understanding eBPF and its Context In Reliability Engineering
 
 eBPF (extended Berkeley Packet Filter) is a powerful, flexible technology built

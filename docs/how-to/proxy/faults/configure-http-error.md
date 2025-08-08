@@ -1,3 +1,8 @@
+---
+title: Inject HTTP Errors
+description: Inject HTTP Errors
+---
+
 # How to Simulate HTTP Errors Using <span class="f">fault</span>
 
 This guide will walk you through emulating application level HTTP errors into your

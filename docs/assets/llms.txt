@@ -2,14 +2,76 @@
 
 > fault is an Open-Source Rust-powered CLI and AI-MCP server that lets engineers and AI agents team up to ship production-ready code. 
 
-* Homepage: https://fault-project.com/
-* Repository: https://github.com/fault-project/fault-cli
+- [Homepage](https://fault-project.com/)
+- [Repository](https://github.com/fault-project/fault-cli)
+
+## Explanations
+
+- [Fault Injection Basics - fault](https://fault-project.com/explanations/fault-injection-basics/): Understanding Fault Injection: Purpose and Use in Reliability Engineering
+- [Technical Journey - fault](https://fault-project.com/explanations/technical-journey/): My Technical Journey Through fault
+- [Understanding eBPF - fault](https://fault-project.com/explanations/understanding-ebpf/): Understanding eBPF and its Context In Reliability Engineering
+- [Why fault? - fault](https://fault-project.com/explanations/why-fault/): Why fault?
+
+## How-to
+
+- [Installing the fault cli - fault](https://fault-project.com/how-to/install/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Chaos Toolkit - fault](https://fault-project.com/how-to/run-with-chaostoolkit/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Reliably - fault](https://fault-project.com/how-to/run-with-reliably/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Code Review & Suggestions - fault](https://fault-project.com/how-to/agent/code-suggestions/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [LLM Configuration - fault](https://fault-project.com/how-to/agent/llm-configuration/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [MCP Server Configuration - fault](https://fault-project.com/how-to/agent/mcp-server-configuration/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [MCP Tools - fault](https://fault-project.com/how-to/agent/mcp-tools/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Platform Analysis - fault](https://fault-project.com/how-to/agent/platform-advices/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Scenario Analysis - fault](https://fault-project.com/how-to/agent/report-advices/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [GitHub Action - fault](https://fault-project.com/how-to/ci/github/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [AWS - fault](https://fault-project.com/how-to/inject/aws/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Google Cloud Platform - fault](https://fault-project.com/how-to/inject/gcp/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Kubernetes - fault](https://fault-project.com/how-to/inject/kubernetes/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Overview - fault](https://fault-project.com/how-to/inject/overview/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Open Telemetry - fault](https://fault-project.com/how-to/observability/traces/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Kubernetes - fault](https://fault-project.com/how-to/platform/run-on-kubernetes/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Windows - fault](https://fault-project.com/how-to/platform/run-on-windows/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Docker - fault](https://fault-project.com/how-to/platform/run-with-docker/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Lifecycle - fault](https://fault-project.com/how-to/proxy/lifecycle/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [TUI - fault](https://fault-project.com/how-to/proxy/tui/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Bandwidth - fault](https://fault-project.com/how-to/proxy/faults/configure-bandwidth/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Blackhole - fault](https://fault-project.com/how-to/proxy/faults/configure-blackhole/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [HTTP Error - fault](https://fault-project.com/how-to/proxy/faults/configure-http-error/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Jitter - fault](https://fault-project.com/how-to/proxy/faults/configure-jitter/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Latency - fault](https://fault-project.com/how-to/proxy/faults/configure-latency/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [LLM - fault](https://fault-project.com/how-to/proxy/faults/configure-llm/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Packet Loss - fault](https://fault-project.com/how-to/proxy/faults/configure-packet-loss/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Extend fault - fault](https://fault-project.com/how-to/proxy/faults/extending/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [TCP Proxies - fault](https://fault-project.com/how-to/proxy/protocols/tcp/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Stealth Mode (eBPF) - fault](https://fault-project.com/how-to/proxy/stealth/configure-stealth-mode/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Generate - fault](https://fault-project.com/how-to/scenarios/generate/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Report - fault](https://fault-project.com/how-to/scenarios/reporting/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Run - fault](https://fault-project.com/how-to/scenarios/run/): Helping Engineers and AI-agents cooperate to build reliable applications
+
+## Reference
+
+- [Builtin Faults - fault](https://fault-project.com/reference/builtin-faults/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [CLI Commands - fault](https://fault-project.com/reference/cli-commands/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Environment Variables - fault](https://fault-project.com/reference/environment-variables/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Platform Injection - fault](https://fault-project.com/reference/injection/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [TCP Proxy Mapping - fault](https://fault-project.com/reference/proxy-mapping-syntax/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Scenario File Format - fault](https://fault-project.com/reference/scenario-file-format/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Scheduling Intervals - fault](https://fault-project.com/reference/schedule-intervals-syntax/): Helping Engineers and AI-agents cooperate to build reliable applications
+
+## Tutorials
+
+- [Creating Scenario - fault](https://fault-project.com/tutorials/create-scenario/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Getting Started with the Proxy - fault](https://fault-project.com/tutorials/getting-started/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [Install - fault](https://fault-project.com/tutorials/install/): Helping Engineers and AI-agents cooperate to build reliable applications
+- [tl;dr - fault](https://fault-project.com/tutorials/tldr/): Helping Engineers and AI-agents cooperate to build reliable applications
+
 
 ## Why?
 
-* Build Like You Have a Full Team: Get AI-powered review hints on reliability, performance and best practices.
-* Ground Your Deliveries: Automate SLO-validated scenarios with zero config - preview your feature under fault in seconds.
-* Replay Incidents with Ease: Swiftly understand how your application reacts by exploring production flakiness locally.
+- Build Like You Have a Full Team: Get AI-powered review hints on reliability, performance and best practices.
+- Ground Your Deliveries: Automate SLO-validated scenarios with zero config - preview your feature under fault in seconds.
+- Replay Incidents with Ease: Swiftly understand how your application reacts by exploring production flakiness locally.
+
 
 ### Reliability Engineering for Developers
 
@@ -56,13 +118,13 @@ fault agent tool
 
 ## Usage
 
-* Runs on Linux, MacOSX and Windows
-* Install via: 
+- Runs on Linux, MacOSX and Windows
+- Install via: 
   
   ```bash
   curl -sSL https://fault-project.com/get | bash
   ```
-* More installation procedures: https://fault-project.com/how-to/install/
+- [More installation procedures](https://fault-project.com/how-to/install/)
 
 
 
@@ -86,7 +148,7 @@ Code-Attribution: required
 Code-Paths-Allow: /, /deploy, /examples, /fault-cli, /fault-ebpf-programs
 Code-Paths-Disallow: /.github, /scripts
 Attribution: required
-Attribution-Text: Source: Fault — https://fault-project.com/
+Attribution-Text: Source: Fault - https://fault-project.com/
 Linkback: required
 Quote-Length-Limit: 200 words
 No-PII: true

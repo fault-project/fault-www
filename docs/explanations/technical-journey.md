@@ -1,3 +1,8 @@
+---
+title: My Technical Journey Through fault
+description: My Technical Journey Through fault
+---
+
 # My Technical Journey Through <span class="f">fault</span>
 
 ## Where it all started

@@ -1,3 +1,8 @@
+---
+title: Basic Install Steps
+description: Basic Install Steps
+---
+
 # Install fault
 
 <span class="f">fault</span> strives to get out of your way and it starts with a smooth installation.
