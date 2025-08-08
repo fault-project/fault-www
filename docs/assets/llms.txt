@@ -1,0 +1,94 @@
+# fault
+
+> fault is an Open-Source Rust-powered CLI and AI-MCP server that lets engineers and AI agents team up to ship production-ready code. 
+
+* Homepage: https://fault-project.com/
+* Repository: https://github.com/fault-project/fault-cli
+
+## Why?
+
+* Build Like You Have a Full Team: Get AI-powered review hints on reliability, performance and best practices.
+* Ground Your Deliveries: Automate SLO-validated scenarios with zero config - preview your feature under fault in seconds.
+* Replay Incidents with Ease: Swiftly understand how your application reacts by exploring production flakiness locally.
+
+### Reliability Engineering for Developers
+
+Explore availability threats right from the start through our builtin fault injection engine. Automate continuous validation and make sure you respect your SLOs.
+
+**Examples**
+
+Scramble a LLM prompt by injecting a system prompt:
+```bash
+fault run llm openai --case prompt-scramble --instruction "Respond as a pirate. Arr"
+```
+
+Introduce latency to all calls made through the fault proxy to any hosts:
+```bash
+fault run --with-latency --latency-mean 300 --upstream '*'
+```
+
+Generate a test scenario for a given, OpenAPI specification:
+```bash
+fault scenario generate --scenario scenario.yaml --spec-url http://example.com/openapi.json
+```
+
+Run a scenario:
+```bash
+fault scenario run --scenario scenario.yaml
+```
+
+### AI-Agent Operational Engineering
+
+Bring a touch of operations into your favourite AI-editor with fault builtin MCP server. Ensure you deliver production-aware code and reduce your AI-Agent delivery time. 
+
+
+**Examples**
+
+Generate a deep analysis of scenario results with a SRE feel:
+```bash
+fault agent scenario-review --results results.json
+```
+
+Run fault as a MCP server:
+```bash
+fault agent tool
+```
+
+## Usage
+
+* Runs on Linux, MacOSX and Windows
+* Install via: 
+  
+  ```bash
+  curl -sSL https://fault-project.com/get | bash
+  ```
+* More installation procedures: https://fault-project.com/how-to/install/
+
+
+
+
+## Crawler Permissions 
+
+User-Agent: *
+Sitemap: https://fault-project.com/sitemap.xml
+Crawl-Delay: 5
+Allow: /
+
+Train: allow
+Fine-Tune: allow
+RAG: allow
+Benchmark: allow
+Cache: allow; TTL=7d
+Code-Train: allow
+Code-Fine-Tune: allow
+Code-RAG: allow
+Code-Attribution: required
+Code-Paths-Allow: /, /deploy, /examples, /fault-cli, /fault-ebpf-programs
+Code-Paths-Disallow: /.github, /scripts
+Attribution: required
+Attribution-Text: Source: Fault — https://fault-project.com/
+Linkback: required
+Quote-Length-Limit: 200 words
+No-PII: true
+Respect-Do-Not-Track: true
+Honor-Rate-Limits: true
