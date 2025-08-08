@@ -32,40 +32,44 @@
       url: r.url
     }));
 
-    let overlay = document.getElementById("marker-overlay");
-    let overlayTimeout;
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
-    let player = AsciinemaPlayer.create(
-      "/assets/rec.cast",
-      document.getElementById('cast'), {
-        loop: true,
-        theme: 'monokai',
-        markers: [
-          [1.0, "LLM fault injection"],
-          [33.0, "Latency network injection"],
-          [65.0, "Scenarios generation from OpenAPI"],
-          [72.0, "Scenarios execution"],
-          [110.0, "Code review generation"],
-          [124.0, "Scenario analysis generation"]
-        ]
-    });
-    player.addEventListener('marker', ({ index, time, label }) => {
-      if (overlayTimeout) {
-        clearTimeout(overlayTimeout);
-      }
+    if (!isMobile) {
+      let overlay = document.getElementById("marker-overlay");
+      let overlayTimeout;
 
-      overlay.textContent = label;
-      overlay.classList.add("show-marker");
-      overlay.style.display = "block";
+      let player = AsciinemaPlayer.create(
+        "/assets/rec.cast",
+        document.getElementById('cast'), {
+          loop: true,
+          theme: 'monokai',
+          markers: [
+            [1.0, "LLM fault injection"],
+            [33.0, "Latency network injection"],
+            [65.0, "Scenarios generation from OpenAPI"],
+            [72.0, "Scenarios execution"],
+            [110.0, "Code review generation"],
+            [124.0, "Scenario analysis generation"]
+          ]
+      });
+      player.addEventListener('marker', ({ index, time, label }) => {
+        if (overlayTimeout) {
+          clearTimeout(overlayTimeout);
+        }
 
-      overlayTimeout = setTimeout(() => {
-        overlay.classList.remove("show-marker");
-        setTimeout(() => {
-          overlay.style.display = "none";
-        }, 500);
-      }, 3000);
-    })
-    player.play();
+        overlay.textContent = label;
+        overlay.classList.add("show-marker");
+        overlay.style.display = "block";
+
+        overlayTimeout = setTimeout(() => {
+          overlay.classList.remove("show-marker");
+          setTimeout(() => {
+            overlay.style.display = "none";
+          }, 500);
+        }, 3000);
+      })
+      player.play();
+    }
 
   function setDeckSource() {
     const match = mqls.find(x => x.mql.matches);

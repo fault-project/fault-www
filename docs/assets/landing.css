@@ -1586,7 +1586,6 @@ label[for="tab-measure"]:hover {
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 0.75em 1em;
-    border-radius: 8px;
     font-size: 1rem;
     display: none;
     z-index: 999;
@@ -1594,10 +1593,17 @@ label[for="tab-measure"]:hover {
 }
 
 #marker-overlay {
-  transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease-out;
   opacity: 0;
 }
 
 #marker-overlay.show-marker {
   opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+  #marker-overlay {
+    display: none !important;
+  }
 }
