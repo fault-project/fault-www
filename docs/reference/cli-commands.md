@@ -458,7 +458,7 @@ Inject <span class="f">fault</span> into your platform resources.
 
 - **`--image <image>`**  
   _Container image to inject, its entrypoint must be the `fault` binary._  
-  _Default:_ `ghcr.io/rebound-how/fault:latest`  
+  _Default:_ `ghcr.io/fault-project/fault-cli:latest`  
   **Example:** `--image myimage:latest`
 
 - **`--duration <duration>`**  
@@ -511,7 +511,7 @@ command.
 
 - **`--image <image>`**  
   _Container image to inject, its entrypoint must be the `fault` binary._  
-  _Default:_ `ghcr.io/rebound-how/fault:latest`  
+  _Default:_ `ghcr.io/fault-project/fault-cli:latest`  
   **Example:** `--image myimage:latest`
 
 - **`--duration <duration>`**  

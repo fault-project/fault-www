@@ -86,10 +86,10 @@ gitGraph
 
     ```bash
     # locally download the official fault image
-    docker pull ghcr.io/rebound-how/fault:<version>
+    docker pull ghcr.io/fault-project/fault-cli:<version>
     
     # tag it to match your nex GCP Artifactory repository
-    docker tag ghcr.io/rebound-how/fault:<version> <region>-docker.pkg.dev/<project>/<repository>/fault:<version>
+    docker tag ghcr.io/fault-project/fault-cli:<version> <region>-docker.pkg.dev/<project>/<repository>/fault:<version>
 
     # push it to the repository
     docker push <region>-docker.pkg.dev/<project>/<repository>/fault:<version>

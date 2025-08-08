@@ -179,7 +179,7 @@ context:
     platform: kubernetes
     service: <service name>  # (1)!
     ns: default  # (2)!
-    image: "ghcr.io/rebound-how/fault:latest"  # (3)!
+    image: "ghcr.io/fault-project/fault-cli:latest"  # (3)!
 ```
 
 1. The service to inject fault into

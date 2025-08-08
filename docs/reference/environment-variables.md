@@ -114,7 +114,7 @@ In addition, this subcommand supports the same proxy fault options as the
 |----------------------------------|---------------------|--------------------------------------------------------------------------------------------------|
 | `FAULT_INJECTION_K8S_NS`                  | `default`    | Namespace of the target service.                                                 |
 | `FAULT_INJECTION_K8S_SERVICE`                  | (none)    | Target service to inject faults into.                                                 |
-| `FAULT_INJECTION_K8S_IMAGE`                  | `ghcr.io/rebound-how/fault:latest`    | Container image to run in the cluster. Its entrypoint must be the `fault` binary.                                                 |
+| `FAULT_INJECTION_K8S_IMAGE`                  | `ghcr.io/fault-project/fault-cli:latest`    | Container image to run in the cluster. Its entrypoint must be the `fault` binary.                                                 |
 | `FAULT_INJECTION_K8S_DURATION`                  | (none)    | Duration for which the fault is applied. Follows [this format](https://docs.rs/parse_duration/latest/parse_duration/#syntax).                                                 |
 
 In addition, this subcommand supports the same proxy fault options as the

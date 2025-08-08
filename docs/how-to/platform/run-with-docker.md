@@ -16,7 +16,7 @@ Docker containers.
 -   [X] Pull the <span class="f">fault</span> image
 
     ```bash
-    docker pull ghcr.io/rebound-how/fault
+    docker pull ghcr.io/fault-project/fault-cli
     ```
 
     !!! warning
@@ -32,7 +32,7 @@ Docker containers.
         -p 3180:3180 \  # (1)!
         --rm \  # (2)!
         -it \  # (3)!
-        ghcr.io/rebound-how/fault \ 
+        ghcr.io/fault-project/fault-cli \ 
             run \
             --proxy-address 0.0.0.0:3180  \ # (4)!
             --upstream http://192.168.1.3:7070 \  # (5)!
@@ -82,7 +82,7 @@ Docker containers.
 -   [X] Pull the <span class="f">fault</span> image
 
     ```bash
-    docker pull ghcr.io/rebound-how/fault:0.6.0-stealth
+    docker pull ghcr.io/fault-project/fault-cli:0.15.0-stealth
     ```
 
     !!! abstract
@@ -105,7 +105,7 @@ Docker containers.
         --cap-add=SYS_ADMIN \ # (6)!
         --cap-add=BPF \ # (7)!
         --cap-add=NET_ADMIN \ # (8)!
-        ghcr.io/rebound-how/fault:0.6.0-stealth \  # (9)!
+        ghcr.io/fault-project/fault-cli:0.15.0-stealth \  # (9)!
             run \
             --stealth \  # (10)!
             --capture-process curl \  # (11)!
