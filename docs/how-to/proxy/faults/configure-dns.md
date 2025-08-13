@@ -211,7 +211,7 @@ resolver may impact your operations.
     {==DELAY==} replies late on purpose increasing latency.
 
     ```bash
-    fault run dns --case delay --delay 200ms
+    fault run dns --case delay --delay 800ms
     ```
 
     This will launch <span class="f">fault</span> and start a UDP proxy
