@@ -38,6 +38,7 @@ nav:
       - "Jitter": how-to/proxy/faults/configure-jitter.md
       - "Blackhole": how-to/proxy/faults/configure-blackhole.md
       - "LLM": how-to/proxy/faults/configure-llm.md
+      - "DNS": how-to/proxy/faults/configure-dns.md
       - "Extend fault": how-to/proxy/faults/extending.md
     - "Platform Injection":
       - "Overview": how-to/inject/overview.md
