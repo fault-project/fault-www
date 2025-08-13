@@ -29,7 +29,7 @@ resolver may impact your operations.
       the DNS server is slow
 
     * `--resolver X` is the address of the remote DNS resolver that will handle
-      any queries that the proxy lets through. Defaults to `127.0.0.1:53`.
+      any queries that the proxy lets through. Defaults to `127.0.0.53:53`.
 
     * `--probability P` is the probability to apply the fault. Defaults to
       `1.0` which means always.
