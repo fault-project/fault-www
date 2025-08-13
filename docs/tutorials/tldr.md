@@ -25,10 +25,14 @@ mindmap
         Network
         LLM
         Database
+        DNS
       Scenario
     AI Agent
       Review
-      MCP
+        Code
+        Scenario
+        Platform
+      MCP Server
     Platform
       Kubernetes
       AWS
@@ -62,6 +66,16 @@ offers a nice way to inject LLM-specific faults into your your LLM calls:
 -   [X] Inject faults into your services making calls to LLM providers
 
     Run `fault run llm` to start injecting LLM faults
+
+## Getting started with fault injection for DNS
+
+The core of <span class="f">fault</span> is its fault injection engine. It
+offers a nice way to inject DNS-specific faults into your your network:
+
+
+-   [X] Inject DNS faults
+
+    Run `fault run dns` to start injecting DNS faults
 
 
 ## Getting started with platform injection
