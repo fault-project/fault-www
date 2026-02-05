@@ -61,6 +61,14 @@ allows you to:
     YAML-based scenarios that can be stored alongside your code and executed
     from your CI.
 
+    ```bash
+    fault scenario generate --spec-url http://localhost:7070/openapi.json
+    ```
+
+    ```bash
+    fault scenario run --scenario scenario.yaml
+    ```
+
 
 ## Getting started with fault injection for LLM
 
@@ -72,6 +80,10 @@ offers a nice way to inject LLM-specific faults into your your LLM calls:
 
     Run `fault run llm` to start injecting LLM faults
 
+    ```bash
+    fault run llm openai --case prompt-scramble --instruction "Response as a pirate. Arr!"
+    ```
+
 ## Getting started with fault injection for DNS
 
 The core of <span class="f">fault</span> is its fault injection engine. It
@@ -81,6 +93,10 @@ offers a nice way to inject DNS-specific faults into your your network:
 -   [X] Inject DNS faults
 
     Run `fault run dns` to start injecting DNS faults
+
+    ```bash
+    fault run dns --case serv-fail
+    ```
 
 
 ## Getting started with platform injection
