@@ -47,11 +47,11 @@ traffic through it to simulate network faults. Let’s start a simple latency
 scenario:
 
 ```bash
-fault run --upstream http://localhost:7070 --with-latency --latency-mean 300
+fault run --proxy "9090=127.0.0.1:7070" --with-latency --latency-mean 300
 ```
 
 This command launches the <span class="f">fault</span> proxy on a local port
-(by default, `127.0.0.1:3180`) and injects an average of `300ms` latency into
+(by default, `127.0.0.1:9090`) and injects an average of `300ms` latency into
 outgoing requests. You can adjust the `--latency-mean` value to experiment with
 different latencies.
 
@@ -63,13 +63,6 @@ traffic from and to this host.
     Note, if you see an error with a mesage such as
     `Os { code: 98, kind: AddrInUse, message: "Address already in use" }`, it is
     a signe that another process is listening on the same address.
-
-!!! tip
-    Always remember to set the right upstream server address that matches the
-    endpoints you are exploring. You can set many `--upstream` arguments.
-
-    Any traffic received by fault that does not match any of these
-    upstream addresses will go through the proxy unaltered.
 
 Once started, the proxy should issue the following message:
 
@@ -153,26 +146,20 @@ For example, if you're using `curl`, you might do:
 ```bash hl_lines="3"
 curl -I -o /dev/null -s \
   -w "Connected IP: %{remote_ip}:%{remote_port}\nTotal time: %{time_total}s\n" \
-  -x http://127.0.0.1:3180 \
-  http://localhost:7070
+  http://localhost:9090
 ```
 
-With `-x http://127.0.0.1:3180` set, all requests made via `curl` will flow
+With `http://localhost:9090` set, all requests made via `curl` will flow
 through fault, experiencing the specified latency. By observing your
 application’s behavior (whether it’s a command-line tool, a local service, or
 a browser hitting a test endpoint), you’ll gain first-hand insight into how
 network slowdowns affect it.
 
-!!! tip
-    Most of the time, you can set either the `HTTP_PROXY` or `HTTPS_PROXY`
-    environment variables to let your client know it needs to go through
-    a proxy: `export HTTP_PROXY=http://127.0.0.1:3180`.
-
 Once you have executed that command, you should see a much higher response
 time:
 
 ```json
-Connected IP: 127.0.0.1:3180
+Connected IP: 127.0.0.1:9090
 Total time: 0.333350s
 ```
 

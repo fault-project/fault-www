@@ -74,6 +74,35 @@ your reliability objectives.
             status: 200
         ```
 
+    === "TCP Proxying Scenario"
+
+        ```yaml
+        title: Single high-latency spike (client ingress)
+        description: A single 800ms spike simulates jitter buffer underrun / GC pause on client network stack.
+        items:
+        - call:
+            method: GET
+            url: http://localhost:9090/
+          context:
+            upstreams:  # (1)!
+            faults:
+            - type: latency
+              side: client
+              mean: 800.0
+              stddev: 100.0
+              direction: ingress
+            proxy:
+              disable_http_proxies: true  # (2)!
+              proxies:
+                - "9090=127.0.0.1:8080"   # (3)!
+          expect:
+            status: 200
+        ```
+
+        1. When disabling HTTP proxying, you don't need to set an upstream domain
+        2. Disable HTTP proxying entirely
+        3. Specify the [proxy mapping](./proxy-mapping-syntax.md)
+
     === "Load test scenario with SLO"
 
         ```yaml

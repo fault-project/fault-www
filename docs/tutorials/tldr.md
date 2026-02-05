@@ -48,7 +48,12 @@ allows you to:
 
 -   [X] Inject faults into your services
 
-    Run `fault run` to start injecting network failures
+    Run `fault run` to start injecting network failures, e.g.:
+
+    ```bash
+    fault run --proxy "9090=127.0.0.1:7070" --with-latency --latency-mean 300
+    ```
+
 
 -   [X] Automate these failures into YAML files that can be run from your CI
 
@@ -86,7 +91,16 @@ your platform so you can easily explore faults there as well.
 
 -   [X] Inject faults into your favourite platform
 
-    Run `fault inject` to start injecting faults
+    Run `fault inject` to start injecting faults, e.g.:
+
+    ```bash
+    fault inject aws
+      --region <region>
+      --cluster <cluster-name>
+      --service <service-name> 
+      --duration 30s
+      --with-latency --latency-mean 800
+    ```
 
 
 ## Getting started with the AI Agent
