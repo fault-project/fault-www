@@ -57,10 +57,27 @@ observed with LLM.
 
 ## Scramble a prompt
 
-One of the most interesting feature from <span class="f">fault</span> is its
-capacity to inject additional system prompts into a LLM query. Thi
-instruction will change the behavior from the LLM and therefore be valuable
-to explore.
+One of the most interesting features of <span class="f">fault</span> is its
+capacity to inject additional instructions into a LLM query, changing the
+model's behaviour in ways your application did not intend.
+
+!!! tip "What you are really testing"
+
+    Modern LLMs — especially Claude — are trained to detect and resist prompt
+    injection. When using `--instruction`, do not expect the model to blindly
+    comply every time. Instead, watch for:
+
+    - **How many turns it takes** before the model identifies and dismisses
+      the injected instruction. A well-hardened model notices immediately; a
+      more compliant one may follow the instruction for several turns first.
+    - **Whether your application notices** an unexpected shift in the model's
+      tone or behaviour.
+    - **Whether your monitoring or evals** flag the anomalous response before
+      a human does.
+
+    The fault succeeding inconsistently is itself realistic: real prompt
+    injection attacks also succeed at varying rates depending on model
+    version, conversation length, and instruction phrasing.
 
 -   [X] Inject a system prompt
 
