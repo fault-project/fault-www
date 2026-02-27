@@ -46,9 +46,13 @@ observed with LLM.
 
     <span class="f">fault</span> supports many LLM providers natively
     (OpenAI, Gemini, OpenRouter and ollama). The restriction for now is that
-    we intercept and modify the
-    [OpenAI chat completions API](https://platform.openai.com/docs/api-reference/chat)
-    only.
+    we intercept and modify a subset of LLM HTTP APIs:
+
+    - OpenAI-compatible `chat/completions`
+    - OpenAI `responses`
+    - Anthropic `messages`
+
+    Other endpoints are forwarded as-is.
 
 
 ## Scramble a prompt
@@ -300,16 +304,12 @@ principle is always the same: start <span class="f">fault</span> so it listens
 on `http://localhost:45580`, then configure your agent to send LLM requests to
 that address.
 
-!!! warning "Anthropic native API support"
+!!! note "OpenAI-compatible vs Anthropic base URLs"
 
-    Some <span class="f">fault</span> LLM faults (such as prompt/response
-    scrambles and bias injection) currently only apply to OpenAI-compatible
-    endpoints (e.g. `/v1/chat/completions` and `/v1/responses`).
+    Different clients expect different base URL shapes:
 
-    If your agent uses Anthropic's native Messages API (`/v1/messages`), those
-    prompt-level faults may not apply yet.
-
-    The `slow-stream` case works regardless of provider/API shape.
+    - OpenAI-compatible clients usually want `http://localhost:45580/v1`
+    - Anthropic clients usually want `http://localhost:45580`
 
 === "aichat"
 
@@ -354,8 +354,7 @@ that address.
     }
     ```
 
-    Note: prompt-level faults may not apply yet for Anthropic's native API.
-    Use `--case slow-stream` to validate the proxy path.
+    When targeting Anthropic, run `fault run llm claude ...`.
 
 === "Claude Code"
 
@@ -370,8 +369,7 @@ that address.
     }
     ```
 
-    Note: prompt-level faults may not apply yet for Anthropic's native API.
-    Use `--case slow-stream` to validate the proxy path.
+    When targeting Anthropic, run `fault run llm claude ...`.
 
 === "Aider"
 
