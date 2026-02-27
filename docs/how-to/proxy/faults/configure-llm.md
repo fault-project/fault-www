@@ -287,8 +287,132 @@ streamed response.
 
     We may now send a query:
 
-    ```bash
-    aichat "What is the average level of Sun per year of France's largest cities?"
+     ```bash
+     aichat "What is the average level of Sun per year of France's largest cities?"
+     ```
+
+     You will notice each chunk takes some time to be displayed.
+
+## Connecting AI coding agents
+
+<span class="f">fault</span> works with most AI coding agents and CLIs. The
+principle is always the same: start <span class="f">fault</span> so it listens
+on `http://localhost:45580`, then configure your agent to send LLM requests to
+that address.
+
+!!! warning "Anthropic native API support"
+
+    Some <span class="f">fault</span> LLM faults (such as prompt/response
+    scrambles and bias injection) currently only apply to OpenAI-compatible
+    endpoints (e.g. `/v1/chat/completions` and `/v1/responses`).
+
+    If your agent uses Anthropic's native Messages API (`/v1/messages`), those
+    prompt-level faults may not apply yet.
+
+    The `slow-stream` case works regardless of provider/API shape.
+
+=== "aichat"
+
+    This guide already shows how to configure `aichat` in the prerequisites
+    section. Ensure its `api_base` points to `http://localhost:45580/v1`.
+
+=== "OpenCode"
+
+    OpenCode reads an `opencode.json` configuration file in your project
+    directory.
+
+    If you are using an OpenAI-compatible provider (recommended for prompt-level
+    faults), set the provider's base URL to the <span class="f">fault</span>
+    proxy:
+
+    ```json title="opencode.json"
+    {
+      "$schema": "https://opencode.ai/config.json",
+      "provider": {
+        "openai": {
+          "options": {
+            "baseURL": "http://localhost:45580/v1"
+          }
+        }
+      }
+    }
     ```
 
-    You will notice each chunk takes some time to be displayed.
+    If you are using Anthropic through OpenCode's `anthropic` provider, you can
+    also set:
+
+    ```json title="opencode.json"
+    {
+      "$schema": "https://opencode.ai/config.json",
+      "provider": {
+        "anthropic": {
+          "options": {
+            "baseURL": "http://localhost:45580"
+          }
+        }
+      }
+    }
+    ```
+
+    Note: prompt-level faults may not apply yet for Anthropic's native API.
+    Use `--case slow-stream` to validate the proxy path.
+
+=== "Claude Code"
+
+    Claude Code supports project-level settings via `.claude/settings.json`.
+    Point it at the <span class="f">fault</span> proxy:
+
+    ```json title=".claude/settings.json"
+    {
+      "env": {
+        "ANTHROPIC_BASE_URL": "http://localhost:45580"
+      }
+    }
+    ```
+
+    Note: prompt-level faults may not apply yet for Anthropic's native API.
+    Use `--case slow-stream` to validate the proxy path.
+
+=== "Aider"
+
+    Aider can be configured via `~/.aider.conf.yml`:
+
+    ```yaml title="~/.aider.conf.yml"
+    openai-api-base: http://localhost:45580
+    ```
+
+    Or for a single run:
+
+    ```bash
+    aider --openai-api-base http://localhost:45580
+    ```
+
+=== "Continue.dev"
+
+    Continue supports OpenAI-compatible providers by setting `apiBase`.
+    Add a model entry that points to the <span class="f">fault</span> proxy:
+
+    ```yaml title="~/.continue/config.yaml"
+    name: My Config
+    version: 0.0.1
+    schema: v1
+
+    models:
+      - name: fault-proxy
+        provider: openai
+        model: gpt-4o
+        apiBase: http://localhost:45580/v1
+        apiKey: <YOUR_API_KEY>
+        roles:
+          - chat
+          - edit
+          - apply
+    ```
+
+=== "Cline (VS Code)"
+
+    In Cline's settings:
+
+    - Set the provider to `OpenAI Compatible`
+    - Set the Base URL to `http://localhost:45580/v1`
+    - Keep using your real provider API key
