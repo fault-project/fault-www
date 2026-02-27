@@ -35,6 +35,32 @@ powered by eBPF, takes a different approach:
 - **Seamless Integration:**  
   With eBPF, there's no need to reconfigure your applications or network clients. The traffic is transparently rerouted through <span class="f">fault</span>'s TCP proxy, allowing you to inject faults without modifying client behavior.
 
+### Runtime flow in stealth mode
+
+The diagram below reflects the actual runtime path used by <span class="f">fault</span> in stealth mode:
+
+```mermaid
+sequenceDiagram
+  autonumber
+  actor Engineer
+  participant Fault as fault CLI
+  participant Hook as eBPF hook (interface)
+  participant App as Captured process
+  participant Proxy as fault TCP proxy
+  participant Upstream as Target service
+
+  Engineer->>Fault: Start `fault run --stealth --capture-process <name>`
+  Fault->>Hook: Load and attach eBPF programs
+  loop For each outbound IPv4 connect from captured process
+    App->>Hook: Open TCP connection
+    Hook->>Proxy: Redirect flow to eBPF proxy IP:port
+    Proxy->>Proxy: Apply configured faults (latency, jitter, abort...)
+    Proxy->>Upstream: Forward traffic to original destination
+    Upstream-->>Proxy: Return response
+    Proxy-->>App: Relay response back transparently
+  end
+```
+
 ## Benefits for Reliability Engineering
 
 Leveraging eBPF in this way offers several advantages for engineers focused on building reliable systems:
