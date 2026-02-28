@@ -124,6 +124,12 @@ you may skip this section.
 
 ## Install using `cargo`
 
+!!! warning
+
+    Due to pending upstream dependencies releases (aya-rs), we cannot currently
+    publish `fault` to crates.io. Please install using the git repository as shown
+    below.
+
 <span class="f">fault</span> is a [rust](https://www.rust-lang.org/) application. It can be installed
 using [cargo](https://github.com/rust-lang/cargo) which will recompile it on the
 machine.
@@ -140,7 +146,7 @@ machine.
 -   [X] Install the `fault` executable
 
     ```bash
-    cargo +nightly install fault
+    cargo +nightly install --git https://github.com/fault-project/fault-cli fault-cli
     ```
 
 ### AI Agent Feature
@@ -152,7 +158,7 @@ machine.
 -   [X] Install the `fault` executable with {==agent==} feature enabled
 
     ```bash
-    cargo +nightly install fault --features agent
+    cargo +nightly install --git https://github.com/fault-project/fault-cli fault-cli --features agent
     ```
 
 ### Stealth Feature
@@ -168,13 +174,13 @@ machine.
     installing the `fault` executable.
 
     ```bash
-    cargo +nightly install fault --features stealth
+    cargo +nightly install --git https://github.com/fault-project/fault-cli fault-cli --features stealth
     ```
 
 -   [X] Install the `ebpf` binaries on Linux
 
     ```bash
-    cargo +nightly install fault-ebpf-programs --target=bpfel-unknown-none -Z build-std=core
+    cargo +nightly install --git https://github.com/fault-project/fault-cli fault-ebpf-programs --target=bpfel-unknown-none -Z build-std=core
     ```
 
 -   [X] Give privileges to `fault` to load and attach these ebpf programs
