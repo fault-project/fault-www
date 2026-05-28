@@ -367,7 +367,7 @@ Learn more about the [Blackhole fault](./builtin-faults.md#blackhole).
 Specific faults to target your LLM.
 
 **<TARGET>**  Which LLM provider to target, one of `openai`, `gemini`,
-`open-router` and `ollama`
+`open-router`, `ollama` or `claude`
 
 - **`--endpoint`**
   The base URL of the targeted LLM provider. Usually, you do not need to set
@@ -570,8 +570,9 @@ These options define the LLm parameters of the agent.
 
     <span class="f">fault</span> supports [Gemini](../how-to/agent/llm-configuration.md#gemini),
     [OpenAI](../how-to/agent/llm-configuration.md#openai),
-    [ollama](../how-to/agent/llm-configuration.md#ollama) and
-    [OpenRouter](../how-to/agent/llm-configuration.md#openrouter).
+    [ollama](../how-to/agent/llm-configuration.md#ollama),
+    [OpenRouter](../how-to/agent/llm-configuration.md#openrouter) and
+    [Anthropic/Claude](../how-to/agent/llm-configuration.md#anthropic--claude).
 
 - **`--llm-client <client>`**  
   _Select the LLM client to use._  

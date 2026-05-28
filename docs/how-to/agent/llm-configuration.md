@@ -229,3 +229,51 @@ many models and find the most appropriate for your needs.
         the `--llm-embed-model-dim` parameter because we use
         [FastEmbed](https://github.com/qdrant/fastembed)
         to workaround this issue.
+
+## Anthropic / Claude
+
+<span class="f">fault</span> supports
+[Anthropic's Claude](https://www.anthropic.com/claude) models.
+
+-   [X] Set an Anthropic API key
+
+    Set the `ANTHROPIC_API_KEY` for the `fault` binary to pick it up.
+
+    ```bash
+    export ANTHROPIC_API_KEY=sk-ant-...
+    ```
+
+    Make sure the key is allowed to use the models you wish to use as well.
+
+-   [X] Configure the client
+
+    Enable the Anthropic client. This can also be
+    set via the `FAULT_AGENT_CLIENT` environment variable.
+
+    ```bash
+    --llm-client anthropic
+    ```
+
+-   [X] Configure the model parameters
+
+    The model used for reasoning. This can also be
+    set via the `LLM_PROMPT_REASONING_MODEL` environment variable.
+
+    ```bash
+    --llm-prompt-reasoning-model claude-sonnet-4-20250514
+    ```
+
+    The embedding model dimension. This can also be
+    set via the `FAULT_AGENT_EMBED_MODEL_DIMENSION` environment variable.
+
+    ```bash
+    --llm-embed-model-dim 384
+    ```
+
+    !!! warning "No explicit embedding model"
+
+        Anthropic doesn't have embedding models and thus the
+        `--llm-embed-model` parameter is ignored. However, we set the 
+        `--llm-embed-model-dim` parameter because we use
+        [FastEmbed](https://github.com/qdrant/fastembed)
+        to workaround this issue.

@@ -126,7 +126,7 @@ follows:
 
 -   [X] Pick up your favorite LLM
 
-    <span class="f">fault</span> supports OpenAI, Gemini, OpenRouter and ollama.
+    <span class="f">fault</span> supports OpenAI, Gemini, OpenRouter, Anthropic/Claude and ollama.
     If you use any of the cloud-based LLMs, you will need to generate an API
     key. If you want privacy, go with ollama.
 
